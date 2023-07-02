@@ -1,6 +1,6 @@
 # WCFServiceUserCrud
 
-servicio WCF con operaciones crud sobre un usuario
+servicio WCF con operaciones crud sobre un usuario dividido en sus tres capas de negocio correspondientes
 
 stack:
 - Net Framework 4.8
