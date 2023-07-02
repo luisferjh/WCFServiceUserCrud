@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="33e6ece8-0e24-42e5-9936-2b51b95eed93" activeEnvironment="Default" name="UserService" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d6c52de1-f88b-4179-9f2f-32c3250224e8" wsaVersion="NONE" name="BasicHttpBinding_IUserService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IUserService" soapVersion="1_1" anonymous="optional" definition="http://localhost:62473/UserService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:62473/UserService.svc?wsdl"><con:part><con:url>http://localhost:62473/UserService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="UserService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62473/UserService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:62473/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:62473/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersById"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByIdResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersAsyncs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAsyncs"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersAsyncs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAsyncsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersByIdAsyncs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByIdAsyncs"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_GetUsersByIdAsyncs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByIdAsyncsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddUserAsyncs_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserAsyncs"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_AddUserAsyncs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserAsyncsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateUserAsyncs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserAsyncs"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_UpdateUserAsyncs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserAsyncsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteUserAsyncs_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserAsyncs"/>
+  </wsdl:message>
+  <wsdl:message name="IUserService_DeleteUserAsyncs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserAsyncsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IUserService">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUsers" message="tns:IUserService_GetUsers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUsersResponse" message="tns:IUserService_GetUsers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUsersById" message="tns:IUserService_GetUsersById_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUsersByIdResponse" message="tns:IUserService_GetUsersById_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AddUser" message="tns:IUserService_AddUser_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AddUserResponse" message="tns:IUserService_AddUser_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateUser" message="tns:IUserService_UpdateUser_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateUserResponse" message="tns:IUserService_UpdateUser_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/DeleteUser" message="tns:IUserService_DeleteUser_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/DeleteUserResponse" message="tns:IUserService_DeleteUser_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAsyncs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUsersAsyncs" message="tns:IUserService_GetUsersAsyncs_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUsersAsyncsResponse" message="tns:IUserService_GetUsersAsyncs_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByIdAsyncs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/GetUsersByIdAsyncs" message="tns:IUserService_GetUsersByIdAsyncs_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/GetUsersByIdAsyncsResponse" message="tns:IUserService_GetUsersByIdAsyncs_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserAsyncs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/AddUserAsyncs" message="tns:IUserService_AddUserAsyncs_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/AddUserAsyncsResponse" message="tns:IUserService_AddUserAsyncs_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserAsyncs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/UpdateUserAsyncs" message="tns:IUserService_UpdateUserAsyncs_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/UpdateUserAsyncsResponse" message="tns:IUserService_UpdateUserAsyncs_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserAsyncs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/DeleteUserAsyncs" message="tns:IUserService_DeleteUserAsyncs_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/DeleteUserAsyncsResponse" message="tns:IUserService_DeleteUserAsyncs_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUsers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersById">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUsersById" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/AddUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IUserService/DeleteUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAsyncs">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUsersAsyncs" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByIdAsyncs">
+      <soap:operation soapAction="http://tempuri.org/IUserService/GetUsersByIdAsyncs" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserAsyncs">
+      <soap:operation soapAction="http://tempuri.org/IUserService/AddUserAsyncs" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserAsyncs">
+      <soap:operation soapAction="http://tempuri.org/IUserService/UpdateUserAsyncs" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserAsyncs">
+      <soap:operation soapAction="http://tempuri.org/IUserService/DeleteUserAsyncs" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">
+      <soap:address location="http://localhost:62473/UserService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:62473/UserService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:62473/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersResult" nillable="true" type="q1:ArrayOfUserDto" xmlns:q1="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUser" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersByIdResult" nillable="true" type="q2:UserDto" xmlns:q2="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDto" nillable="true" type="q3:UserDto" xmlns:q3="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddUserResult" nillable="true" type="q4:ResponseServiceDto" xmlns:q4="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDto" nillable="true" type="q5:UserDto" xmlns:q5="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserResult" nillable="true" type="q6:ResponseServiceDto" xmlns:q6="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDeleteDto" nillable="true" type="q7:UserDeleteDto" xmlns:q7="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUserResult" nillable="true" type="q8:ResponseServiceDto" xmlns:q8="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAsyncs">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAsyncsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersAsyncsResult" nillable="true" type="q9:ArrayOfUserDto" xmlns:q9="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByIdAsyncs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUser" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByIdAsyncsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersByIdAsyncsResult" nillable="true" type="q10:UserDto" xmlns:q10="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserAsyncs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDto" nillable="true" type="q11:UserDto" xmlns:q11="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserAsyncsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddUserAsyncsResult" nillable="true" type="q12:ResponseServiceDto" xmlns:q12="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserAsyncs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDto" nillable="true" type="q13:UserDto" xmlns:q13="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserAsyncsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserAsyncsResult" nillable="true" type="q14:ResponseServiceDto" xmlns:q14="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserAsyncs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userDeleteDto" nillable="true" type="q15:UserDeleteDto" xmlns:q15="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserAsyncsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUserAsyncsResult" nillable="true" type="q16:ResponseServiceDto" xmlns:q16="http://schemas.datacontract.org/2004/07/Domain.Models"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:62473/UserService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Domain.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Domain.Models">
+  <xs:complexType name="ArrayOfUserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDto" nillable="true" type="tns:UserDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDto" nillable="true" type="tns:ArrayOfUserDto"/>
+  <xs:complexType name="UserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Genre" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDto" nillable="true" type="tns:UserDto"/>
+  <xs:complexType name="ResponseServiceDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceDto" nillable="true" type="tns:ResponseServiceDto"/>
+  <xs:complexType name="UserDeleteDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDeleteDto" nillable="true" type="tns:UserDeleteDto"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:62473/UserService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint></con:endpoints><con:operation id="2f87de89-c6cb-40dc-af3d-c76bbe4c8f83" isOneWay="false" action="http://tempuri.org/IUserService/AddUser" name="AddUser" bindingOperationName="AddUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="850caa4c-5374-4e3d-8613-60229c647d95" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AddUser>\r
+         <!--Optional:-->\r
+         <tem:userDto>\r
+            <!--Optional:-->\r
+            <dom:Birthday>2000-04-15</dom:Birthday>\r
+            <!--Optional:-->\r
+            <dom:Genre>Female</dom:Genre>\r
+            <!--Optional:-->\r
+            <dom:Id>0</dom:Id>\r
+            <!--Optional:-->\r
+            <dom:Name>Lucia Calleja</dom:Name>\r
+         </tem:userDto>\r
+      </tem:AddUser>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/AddUser"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5c775e5a-4431-4476-9895-2a42e3b52b82" isOneWay="false" action="http://tempuri.org/IUserService/AddUserAsyncs" name="AddUserAsyncs" bindingOperationName="AddUserAsyncs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e2162f1b-ee03-4b9c-872d-0c26b59fe10d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:AddUserAsyncs>\r
+         <!--Optional:-->\r
+         <tem:userDto>\r
+            <!--Optional:-->\r
+            <dom:Birthday>?</dom:Birthday>\r
+            <!--Optional:-->\r
+            <dom:Genre>?</dom:Genre>\r
+            <!--Optional:-->\r
+            <dom:Id>?</dom:Id>\r
+            <!--Optional:-->\r
+            <dom:Name>?</dom:Name>\r
+         </tem:userDto>\r
+      </tem:AddUserAsyncs>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/AddUserAsyncs"/></con:call></con:operation><con:operation id="7d2171f9-255b-4d56-916f-eb71f1e8bacd" isOneWay="false" action="http://tempuri.org/IUserService/DeleteUser" name="DeleteUser" bindingOperationName="DeleteUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3d864ac7-ec5f-4395-aee9-4e92f37135a8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:DeleteUser>\r
+         <!--Optional:-->\r
+         <tem:userDeleteDto>\r
+            <!--Optional:-->\r
+            <dom:Id>4</dom:Id>\r
+         </tem:userDeleteDto>\r
+      </tem:DeleteUser>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/DeleteUser"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="49165109-0228-4ea2-b94d-14087f6284d2" isOneWay="false" action="http://tempuri.org/IUserService/DeleteUserAsyncs" name="DeleteUserAsyncs" bindingOperationName="DeleteUserAsyncs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="48ca34ce-86ab-4645-8fed-8bfbb53c229b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:DeleteUserAsyncs>\r
+         <!--Optional:-->\r
+         <tem:userDeleteDto>\r
+            <!--Optional:-->\r
+            <dom:Id>?</dom:Id>\r
+         </tem:userDeleteDto>\r
+      </tem:DeleteUserAsyncs>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/DeleteUserAsyncs"/></con:call></con:operation><con:operation id="8809287f-2440-49df-b96f-c609c19b043e" isOneWay="false" action="http://tempuri.org/IUserService/GetUsers" name="GetUsers" bindingOperationName="GetUsers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7c337af3-7c55-46b2-8dfa-231b8db35b7c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsers/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/GetUsers"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b5225314-6816-48ce-93a4-6675846b7c0a" isOneWay="false" action="http://tempuri.org/IUserService/GetUsersAsyncs" name="GetUsersAsyncs" bindingOperationName="GetUsersAsyncs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e00c8492-ba1f-4950-9385-54045f7c1f45" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsersAsyncs/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/GetUsersAsyncs"/></con:call></con:operation><con:operation id="833d6899-f528-4a16-a67d-6b4d2d97f7ec" isOneWay="false" action="http://tempuri.org/IUserService/GetUsersById" name="GetUsersById" bindingOperationName="GetUsersById" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="62ade639-ad1e-41e4-a61c-47aeb2852e3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsersById>\r
+         <!--Optional:-->\r
+         <tem:idUser>?</tem:idUser>\r
+      </tem:GetUsersById>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/GetUsersById"/></con:call></con:operation><con:operation id="5d938a62-1a3b-478c-852a-57e2c23bcea7" isOneWay="false" action="http://tempuri.org/IUserService/GetUsersByIdAsyncs" name="GetUsersByIdAsyncs" bindingOperationName="GetUsersByIdAsyncs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e5bd546-e821-457c-8219-6febecdcbb2b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetUsersByIdAsyncs>\r
+         <!--Optional:-->\r
+         <tem:idUser>?</tem:idUser>\r
+      </tem:GetUsersByIdAsyncs>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/GetUsersByIdAsyncs"/></con:call></con:operation><con:operation id="5ddf3b6a-ce04-4035-bde8-44fdb45a60a7" isOneWay="false" action="http://tempuri.org/IUserService/UpdateUser" name="UpdateUser" bindingOperationName="UpdateUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4a00dea1-1d76-4f9b-9363-72be9da9e986" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:UpdateUser>\r
+         <!--Optional:-->\r
+         <tem:userDto>\r
+            <!--Optional:-->\r
+            <dom:Birthday>?</dom:Birthday>\r
+            <!--Optional:-->\r
+            <dom:Genre>?</dom:Genre>\r
+            <!--Optional:-->\r
+            <dom:Id>?</dom:Id>\r
+            <!--Optional:-->\r
+            <dom:Name>?</dom:Name>\r
+         </tem:userDto>\r
+      </tem:UpdateUser>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/UpdateUser"/></con:call></con:operation><con:operation id="f294ab62-59cb-4eb8-a9e6-66188cb5ed02" isOneWay="false" action="http://tempuri.org/IUserService/UpdateUserAsyncs" name="UpdateUserAsyncs" bindingOperationName="UpdateUserAsyncs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5aed7b7f-ec1f-42f5-809c-e301e06bc61f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:62473/UserService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:dom="http://schemas.datacontract.org/2004/07/Domain.Models">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:UpdateUserAsyncs>\r
+         <!--Optional:-->\r
+         <tem:userDto>\r
+            <!--Optional:-->\r
+            <dom:Birthday>?</dom:Birthday>\r
+            <!--Optional:-->\r
+            <dom:Genre>?</dom:Genre>\r
+            <!--Optional:-->\r
+            <dom:Id>?</dom:Id>\r
+            <!--Optional:-->\r
+            <dom:Name>?</dom:Name>\r
+         </tem:userDto>\r
+      </tem:UpdateUserAsyncs>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUserService/UpdateUserAsyncs"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
